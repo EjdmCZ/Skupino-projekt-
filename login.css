@@ -1,0 +1,21 @@
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+div {
+	display: inline-block;
+   justify-content: center;
+  height: 30px;
+  background-color: orange;
+  padding: 2rem;
+  border: solid 1rem;
+}	
