@@ -37,18 +37,19 @@ body {
   border-radius: 100px;
 }
 .logo {
+  size: cm;
   position: absolute;
   right: 160vh;
   top: 4vh;
-  margin-top: 0;
-
-  width: 10vh;
-  height: 10vh;
+  width: 25vh;
+  height: 11.5vh;
 }
+
 .nove {
   color: black;
 }
 .obrz {
+  border-radius: 2vh;
   align-content: center;
 }
 /* For mobile phones: */
@@ -136,8 +137,10 @@ body {
   }
 }
 .rag {
+  border-radius: 3vh;
+  font-family: "Montserrat-bold";
   border-style: outset;
-  background-color: white;
+
   margin-left: 10%;
   margin-right: 10%;
   border-color: rgb(29, 0, 133);

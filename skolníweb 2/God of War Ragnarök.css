@@ -7,11 +7,13 @@
   src: url(font/Montserrat-Bold.ttf);
 }
 body {
+  font-family: "Montserrat";
   margin: 0;
   padding: 0;
   background-color: #ccc;
 }
-.nav ul {
+
+ul {
   font-family: "Montserrat";
   font-size: 4vh;
   list-style: none;
@@ -36,14 +38,14 @@ body {
   transition: 0.4s;
   border-radius: 100px;
 }
+
 .logo {
+  size: cm;
   position: absolute;
   right: 160vh;
   top: 4vh;
-  margin-top: 0;
-
-  width: 10vh;
-  height: 10vh;
+  width: 25vh;
+  height: 11.5vh;
 }
 .Ohranicenii {
   border-color: black;
@@ -131,4 +133,23 @@ body {
   .col-12 {
     width: 100%;
   }
+}
+h1 {
+  font-family: "Montserrat-bold";
+}
+
+div {
+  font-size: 2.5vh;
+}
+.video {
+  width: 75vh;
+  height: 45vh;
+  border-radius: 7vh;
+
+  padding: 1vh;
+}
+
+.vid {
+  border-radius: 7vh;
+  background-color: rgb(29, 0, 133);
 }

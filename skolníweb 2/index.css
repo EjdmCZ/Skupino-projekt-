@@ -57,13 +57,12 @@ body {
   bottom: 35vh;
 }
 .logo {
+  size: cm;
   position: absolute;
   right: 160vh;
   top: 4vh;
-  margin-top: 0;
-
-  width: 10vh;
-  height: 10vh;
+  width: 25vh;
+  height: 11.5vh;
 }
 .nav ul {
   font-family: "Montserrat";
