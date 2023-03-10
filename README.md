@@ -1,5 +1,6 @@
 # Skupino-projekt-
-Wild-kód,
-Vorlíček-Info-Témata, gramatika,
-Šešták-novinky
-Trachta-grafika 
+Wild-úprava grafiky.
+Vorlíček-Zpracování novinky na web.
+Šešták-Zpracování novinky. 
+Trachta-Grafický návrh.
+
