@@ -1,6 +1,5 @@
 # Skupino-projekt-
 Wild-úprava grafiky.
-Vorlíček-Zpracování novinky na web.
+Vorlíček-Grafický návrh.
 Šešták-Zpracování novinky. 
-Trachta-Grafický návrh.
-
+Trachta-Zpracování novinky na web.
