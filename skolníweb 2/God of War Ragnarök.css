@@ -1,4 +1,4 @@
-@font-face {
+  @font-face {
   font-family: "Montserrat";
   src: url(font/Montserrat-Regular.ttf);
 }
@@ -151,5 +151,11 @@ div {
 
 .vid {
   border-radius: 7vh;
+  background-color: rgb(29, 0, 133);
+}
+.grafrez {
+  width: 55%;
+  height: 50%;
+    border-radius: 7vh;
   background-color: rgb(29, 0, 133);
 }
