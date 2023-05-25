@@ -1,0 +1,158 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(font/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat-bold";
+  src: url(font/Montserrat-Bold.ttf);
+}
+body {
+  font-family: "Montserrat";
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;
+}
+
+.nav ul {
+  font-family: "Montserrat";
+  font-size: 4vh;
+  list-style: none;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+}
+.nav li {
+  display: inline-block;
+}
+.nav a {
+  text-decoration: none;
+  color: rgb(170, 238, 81);
+  display: block;
+  padding: 1.4vw;
+}
+.nav a:hover {
+  background: rgb(95, 95, 95);
+  transition: 0.4s;
+}
+.Ohranicenii {
+  border-color: black;
+  border-width: 15%;
+}
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {
+    width: 8.33%;
+  }
+  .col-s-2 {
+    width: 16.66%;
+  }
+  .col-s-3 {
+    width: 25%;
+  }
+  .col-s-4 {
+    width: 33.33%;
+  }
+  .col-s-5 {
+    width: 41.66%;
+  }
+  .col-s-6 {
+    width: 50%;
+  }
+  .col-s-7 {
+    width: 58.33%;
+  }
+  .col-s-8 {
+    width: 66.66%;
+  }
+  .col-s-9 {
+    width: 75%;
+  }
+  .col-s-10 {
+    width: 83.33%;
+  }
+  .col-s-11 {
+    width: 91.66%;
+  }
+  .col-s-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
+h1 {
+  font-family: "Montserrat-bold";
+}
+
+div {
+  font-size: 2.5vh;
+}
+.video {
+  width: 75vh;
+  height: 45vh;
+  border-radius: 7vh;
+
+  padding: 1vh;
+}
+
+.vid {
+  border-radius: 7vh;
+  background-color: rgb(170, 238, 81);
+}
+.grafrez {
+  width: 55%;
+  height: 50%;
+  border-radius: 7vh;
+  background-color: rgb(170, 238, 81);
+}
+#mode-toggle {
+  position: absolute;
+  margin-top: 2.5vh;
+  width: 40px;
+  cursor: pointer;
+}
+
+.dark-mode {
+  background-color: rgba(3, 3, 3, 0.952);
+  color: rgb(170, 238, 81);
+}

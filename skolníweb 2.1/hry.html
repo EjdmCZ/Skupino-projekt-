@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="hry.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <li><a class="Novinky" href="novinky.html">Novinky</a></li>
+        <li><a class="Domov" href="index.html">Domů</a></li>
+        <li><a class="Hry" href="hry.html">Hry</a></li>
+        <li><a class="onás" href="onas.html">O nás</a></li>
+        <img
+          src="moon.png"
+          id="mode-toggle"
+          alt="Dark Mode / Light Mode"
+          onclick="toggleMode()"
+        />
+      </ul>
+    </div>
+    <script>
+      function toggleMode() {
+        var body = document.body;
+        body.classList.toggle("dark-mode");
+
+        var img = document.getElementById("mode-toggle");
+        var currentImgSrc = img.src;
+
+        if (currentImgSrc.includes("moon.png")) {
+          img.src = "sun.png";
+        } else {
+          img.src = "moon.png";
+        }
+      }
+    </script>
+  </body>
+</html>

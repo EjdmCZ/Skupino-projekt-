@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(font/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat-bold";
+  src: url(font/Montserrat-Bold.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;
+}
+.nav ul {
+  font-family: "Montserrat";
+  font-size: 4vh;
+  list-style: none;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+}
+.nav li {
+  display: inline-block;
+}
+.nav a {
+  text-decoration: none;
+  color: rgb(170, 238, 81);
+  display: block;
+  padding: 1.4vw;
+}
+.nav a:hover {
+  background: rgb(95, 95, 95);
+  transition: 0.4s;
+}
+
+.nove {
+  color: black;
+}
+.obrz {
+  border-radius: 2vh;
+  align-content: center;
+}
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {
+    width: 8.33%;
+  }
+  .col-s-2 {
+    width: 16.66%;
+  }
+  .col-s-3 {
+    width: 25%;
+  }
+  .col-s-4 {
+    width: 33.33%;
+  }
+  .col-s-5 {
+    width: 41.66%;
+  }
+  .col-s-6 {
+    width: 50%;
+  }
+  .col-s-7 {
+    width: 58.33%;
+  }
+  .col-s-8 {
+    width: 66.66%;
+  }
+  .col-s-9 {
+    width: 75%;
+  }
+  .col-s-10 {
+    width: 83.33%;
+  }
+  .col-s-11 {
+    width: 91.66%;
+  }
+  .col-s-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
+.rag {
+  align-items: center;
+  border-radius: 3vh;
+  font-family: "Montserrat-bold";
+  border-style: outset;
+
+  margin-left: 10%;
+  margin-right: 10%;
+  border-color: rgb(170, 238, 81);
+  display: flex;
+}
+.obrz {
+  margin-right: 55%;
+}
+.obrz {
+  display: block;
+  text-decoration: none;
+  color: rgb(170, 238, 81);
+}
+.obrz:hover {
+  text-decoration: underline;
+}
+#mode-toggle {
+  position: absolute;
+  margin-top: 2.5vh;
+  width: 40px;
+  cursor: pointer;
+}
+
+.dark-mode {
+  background-color: rgba(3, 3, 3, 0.952);
+  color: rgb(170, 238, 81);
+}
+.dark-mode .nove {
+  color: rgb(170, 238, 81);
+}
