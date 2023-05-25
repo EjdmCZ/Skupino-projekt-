@@ -31,7 +31,28 @@ body {
   background: rgb(95, 95, 95);
   transition: 0.4s;
 }
+.rag {
+  align-items: center;
+  border-radius: 3vh;
+  font-family: "Montserrat-bold";
+  border-style: outset;
 
+  margin-left: 10%;
+  margin-right: 10%;
+  border-color: rgb(170, 238, 81);
+  display: flex;
+}
+.obrz {
+  margin-right: 55%;
+}
+.obrz {
+  display: block;
+  text-decoration: none;
+  color: rgb(170, 238, 81);
+}
+.obrz:hover {
+  text-decoration: underline;
+}
 #mode-toggle {
   position: absolute;
   margin-top: 2.5vh;
