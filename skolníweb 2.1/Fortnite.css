@@ -64,11 +64,10 @@ div {
 }
 #mode-toggle {
   position: absolute;
-  margin-top: 2.5vh;
+  margin-top: 3.5vh;
   width: 40px;
   cursor: pointer;
 }
-
 .dark-mode {
   background-color: rgba(3, 3, 3, 0.952);
   color: rgb(170, 238, 81);

@@ -63,7 +63,7 @@ body {
 }
 #mode-toggle {
   position: absolute;
-  margin-top: 2.5vh;
+  margin-top: 3.5vh;
   width: 40px;
   cursor: pointer;
 }
@@ -76,10 +76,14 @@ body {
   color: rgb(170, 238, 81);
 }
 .ramecek {
+  font-family: Montserrat;
   align-items: center;
   border-style: outset;
   margin-left: 10%;
   margin-right: 10%;
   border-color: rgb(170, 238, 81);
-  display: table;    
+  display: table;
+}
+a {
+  text-decoration: none;
 }
