@@ -16,22 +16,7 @@
         <li><a class="onás" href="onas.html">O nás</a></li>
         <img src="moon.png" id="mode-toggle" alt="Dark Mode / Light Mode" onclick="toggleMode()">
       </ul>
-      <script>
-        function toggleMode() {
-             var body = document.body;
-             body.classList.toggle("dark-mode");
-             
-             var img = document.getElementById("mode-toggle");
-             var currentImgSrc = img.src;
-             
-             if (currentImgSrc.includes("moon.png")) {
-               img.src = "sun.png";
-             } else {
-               img.src = "moon.png";
-             }
-           }
-       
-         </script>
+   
 <body>
 
     <p>autor:Štěpán Šesták</p>
@@ -55,4 +40,5 @@
 </div>
 
 </body>
+<script src="js.js "></script>
 </html>

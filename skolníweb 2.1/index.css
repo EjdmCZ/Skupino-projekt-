@@ -49,7 +49,6 @@ body {
   margin-right: 40vw;
 }
 .zbyt {
-  position: absolute;
   font-family: "Montserrat";
   margin-left: 2vw;
   text-align: left;
@@ -178,4 +177,7 @@ p {
 .dark-mode {
   background-color: rgba(3, 3, 3, 0.952);
   color: rgb(170, 238, 81);
+}
+.txt {
+  padding: 2vh;
 }
