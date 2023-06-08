@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ccc;
+}
 div.form {
   background: linear-gradient(45deg,rgb(170, 238, 81),white,lightgrey);
   width: 12cm;
