@@ -180,3 +180,18 @@ p {
 .txt {
   padding: 2vh;
 }
+}
+.login {
+  position: absolute;
+  width: 180vw;
+}
+.logbut {
+  margin-right: 0.8vw;
+  padding: 1vw;
+  border-color: grey;
+  border-style: outset;
+  color: rgb(170, 238, 81);
+}
+.logpis {
+color: rgb(170, 238, 81);
+}
