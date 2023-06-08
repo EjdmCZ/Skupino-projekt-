@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="hry.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+          <li><img class="logo" src="logo2.png"></li>
+          <li><a class="Novinky" href="novinky.html">Novinky</a></li>
+          <li><a class="Domov" href="index.html">Domů</a></li>
+          <li><a class="Onás" href="onas.html">O nás</a></li>
+          <li><a class="Kontakt" href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+    <center><p class="Info">Hry</p></center>
+</div>
+<center>
+ <h1 class="text">Kámen, Papír, Nůžky</h1>
+ <div class="container">
+   <button id="kámen">✊</button>
+   <button id="papír">🤚</button>
+   <button id="nůžky">✌️</button>
+   <div id="result"></div>
+ </div>
+</center>
+<div class="text">
+ <script>
+   const choices = { 
+     kámen: { nůžky: 'beats' },
+     papír: { kámen: 'beats' },
+     nůžky: {papír: 'beats' }
+   };
+   const buttons = document.querySelectorAll('button');
+   const result = document.getElementById('result');
+   buttons.forEach(button => {
+     button.addEventListener('click', e => {
+       const playerChoice = e.target.id;
+       const computerChoice = getComputerChoice();
+       const winner = getWinner(playerChoice, computerChoice);
+       if (winner === 'player') {
+         result.textContent = `Vyhrál jsi! ${playerChoice} porazil ${computerChoice}`;
+       } else if (winner === 'computer') {
+         result.textContent = `Prohrál jsi! ${computerChoice} porazil ${playerChoice}`;
+       } else {
+         result.textContent = `Je to remíza! Oba jste si vybrali ${playerChoice}`;
+       }
+     });
+   });
+   function getComputerChoice() {
+     return Object.keys(choices)[Math.floor(Math.random() * 3)];
+   }
+   function getWinner(playerChoice, computerChoice) {
+     if (choices[playerChoice] && choices[playerChoice][computerChoice]) {
+       return 'player';
+     } else if (choices[computerChoice] && choices[computerChoice][playerChoice]) {
+       return 'computer';
+     } else {
+       return 'tie';
+     }
+   }
+ </script>
+</div>
+ <br><br><br>
+</body>
+</html>
