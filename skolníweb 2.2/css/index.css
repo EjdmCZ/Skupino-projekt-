@@ -195,10 +195,22 @@ p {
 .logpis {
 color: rgb(170, 238, 81);
 }
-#menu {
+.menu {
+  bottom: 1px;
   position: absolute;
-  margin-top: 1vw;
   margin-left: 25vw;
   width: 7vh;
   cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  left: 35vh;
+  background-color: white;
+  padding: 15px;
 }
