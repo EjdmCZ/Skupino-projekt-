@@ -214,3 +214,6 @@ color: rgb(170, 238, 81);
   background-color: white;
   padding: 15px;
 }
+.dropdown:hover .dropdown-content {
+  display: block;
+}
