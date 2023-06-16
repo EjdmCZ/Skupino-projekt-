@@ -41,8 +41,6 @@ input#potvrzení:hover{
 }
 h1 {
 	text-align: center;
-	text-decoration: underline;
-	color: blue;
 	font: 24px;
 }
 select {
