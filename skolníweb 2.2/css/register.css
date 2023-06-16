@@ -49,3 +49,25 @@ select {
 	padding: 0,4px;
 	font-weight: bold;
 }
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color:  #ccc;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+nav li a:hover {
+  background-color:rgb(170, 238, 81) ;
+}
+
