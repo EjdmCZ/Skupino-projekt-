@@ -1,3 +1,6 @@
+<?php 
+  session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,10 +15,10 @@
   </head>
   <body>
     <?php
-      session_start();
-      $txt1 = "";
-      if ($_SESSION["prihlaseni"] = true) {$txt1 = "Přihlášen";
-        } else {$txt1 = "Nepřihlášen";}
+      $Prihlasen_TF = "";
+      if ($_SESSION["prihlaseni"] == true) {$Prihlasen_TF = "Přihlášen";
+        } else {$Prihlasen_TF = "Nepřihlášen";}
+      $username = $_SESSION['username'];
     ?>  
     <div class="nav">
       <ul>
@@ -33,7 +36,8 @@
         </div>
      </ul>
     </div>
-    <p><?php echo $txt1; ?></p>
+    <p>Vítejte <?php echo $username; ?></p>
+    <p><?php echo $Prihlasen_TF; ?></p>
     </div class="txt">
     <p class="Info" >Informace z Celého</br> Světa Her</p>
   </div>
