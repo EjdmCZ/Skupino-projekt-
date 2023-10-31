@@ -26,6 +26,9 @@
         $Prihlasen_TF = "Přihlášen";
         } else {$Prihlasen_TF = "Nepřihlášen";}
       $username = $_SESSION["username"];
+      if ($_SESSION["prihlaseni"] == false) {
+           $StylDispleje = "none";
+          } else {$StylDispleje = "block";}   
     ?>  
     <div class="nav">
       <ul>
@@ -43,7 +46,12 @@
         </div>
      </ul>
     </div>
-    <p>Vítejte <?php echo $username; ?></p>
+    <style>
+        .skryty-text {
+            display: <?php echo $StylDispleje; ?>;
+                      }
+    </style>
+    <p class="skryty-text">Vítejte <?php echo $username; ?></p>
     <p><?php echo $Prihlasen_TF; ?></p>
     </div class="txt">
     <p class="Info" >Informace z Celého</br> Světa Her</p>
