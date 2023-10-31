@@ -31,7 +31,7 @@
                 if ($uzivatelskeJmeno === "Jan Macak" && $heslo === "12345") {
                     $zprava = "Přihlášení úspěšné, Vítejte, Jan Macak!";
                     $_SESSION["prihlaseni"] = true;
-                    $_SESSION['username'] = "Jan Macak";
+                    $_SESSION["username"] = "Jan Macak";
                 } else {    
                     $zprava = "Špatné uživatelské jméno nebo heslo. Zkontrolujte své údaje.";
                     $_SESSION["prihlaseni"] = false;
