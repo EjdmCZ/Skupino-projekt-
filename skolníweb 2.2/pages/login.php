@@ -1,3 +1,6 @@
+<?php 
+  session_start();
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,8 +22,6 @@
         <h1 id="Prvni_nadpis">Přihlášení</h1>
 
             <?php
-            session_start();
-
             $zprava = '';
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -30,7 +31,8 @@
                 if ($uzivatelskeJmeno === "Jan Macak" && $heslo === "12345") {
                     $zprava = "Přihlášení úspěšné, Vítejte, Jan Macak!";
                     $_SESSION["prihlaseni"] = true;
-                } else {
+                    $_SESSION['username'] = "Jan Macak";
+                } else {    
                     $zprava = "Špatné uživatelské jméno nebo heslo. Zkontrolujte své údaje.";
                     $_SESSION["prihlaseni"] = false;
                 }
