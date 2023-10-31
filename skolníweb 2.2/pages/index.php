@@ -1,5 +1,11 @@
 <?php 
   session_start();
+   if (!isset($_SESSION["prihlaseni"])) {
+       $_SESSION["prihlaseni"] = false;
+      }
+  if (!isset($_SESSION["username"])) {
+       $_SESSION["username"] = "Nepřihlášen" ;
+      }
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,9 +22,10 @@
   <body>
     <?php
       $Prihlasen_TF = "";
-      if ($_SESSION["prihlaseni"] == true) {$Prihlasen_TF = "Přihlášen";
+      if ($_SESSION["prihlaseni"] == true) {
+        $Prihlasen_TF = "Přihlášen";
         } else {$Prihlasen_TF = "Nepřihlášen";}
-      $username = $_SESSION['username'];
+      $username = $_SESSION["username"];
     ?>  
     <div class="nav">
       <ul>
