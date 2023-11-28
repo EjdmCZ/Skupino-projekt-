@@ -29,7 +29,11 @@
       if ($_SESSION["prihlaseni"] == false) {
            $StylDispleje = "none";
           } else {$StylDispleje = "block";}   
-    ?>  
+      $BarvaTextu = "";
+       if ($_SESSION["prihlaseni"] == true) {
+        $BarvaTextu = "green";
+        } else {$BarvaTextu = "red";}
+      ?>  
     <div class="nav">
       <ul>
         <li><a class="Novinky" href="novinky.html">Novinky</a></li>
@@ -50,9 +54,12 @@
         .skryty-text {
             display: <?php echo $StylDispleje; ?>;
                       }
+        .BarvaTX {
+          color: <?php echo $BarvaTextu; ?>;
+                      }
     </style>
     <p class="skryty-text">Vítejte <?php echo $username; ?></p>
-    <p><?php echo $Prihlasen_TF; ?></p>
+    <p class="BarvaTX"><?php echo $Prihlasen_TF; ?></p>
     </div class="txt">
     <p class="Info" >Informace z Celého</br> Světa Her</p>
   </div>
