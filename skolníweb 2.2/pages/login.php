@@ -36,6 +36,14 @@
                     $zprava = "Špatné uživatelské jméno nebo heslo. Zkontrolujte své údaje.";
                     $_SESSION["prihlaseni"] = false;
                 }
+                if ($uzivatelskeJmeno === "Jakub Mesicek" && $heslo === "12345") {
+                    $zprava = "Přihlášení úspěšné, Vítejte, Jakube Mesicku,!";
+                    $_SESSION["prihlaseni"] = true;
+                    $_SESSION["username"] = "Jakub Mesicek";
+                } else {    
+                    $zprava = "Špatné uživatelské jméno nebo heslo. Zkontrolujte své údaje.";
+                    $_SESSION["prihlaseni"] = false;
+                }
             }
             ?>
 
