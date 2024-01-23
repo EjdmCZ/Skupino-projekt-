@@ -1,11 +1,5 @@
 <?php 
   session_start();
-   if (!isset($_SESSION["prihlaseni"])) {
-       $_SESSION["prihlaseni"] = false;
-      }
-  if (!isset($_SESSION["username"])) {
-       $_SESSION["username"] = "Nepřihlášen" ;
-      }
  ?>
 <!DOCTYPE html>
 <html lang="en">
