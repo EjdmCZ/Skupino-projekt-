@@ -39,7 +39,7 @@
             }
             ?>
 
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <label>Uživatelské jméno:</label>
             <input type="text" name="user" placeholder="Napiš sem svoje jméno" id="Jmeno"><br>
 
