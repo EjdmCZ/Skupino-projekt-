@@ -5,3 +5,4 @@ Vorlíček-Grafický návrh.
 Trachta-Zpracování novinky na web.
 
 
+
