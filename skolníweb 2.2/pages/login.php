@@ -35,7 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $uzivatelskeJmeno = isset($_POST["user"]) ? $_POST["user"] : "";
     $heslo = isset($_POST["user_pass"]) ? $_POST["user_pass"] : "";
 
-    // Kontrola zda je zadané uživatelské jméno a heslo v poli
     if (array_key_exists($uzivatelskeJmeno, $uzivatele) && $uzivatele[$uzivatelskeJmeno] === $heslo) {
         $zprava = "Přihlášení úspěšné, Vítejte, $uzivatelskeJmeno!";
         $_SESSION["prihlaseni"] = true;
