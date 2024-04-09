@@ -1,27 +1,22 @@
 <?php
-function savePreference($color) {
-    setcookie('tablecolor', $color, time() + (86400 * 30), "/");
-}
-function loadPreference() {
-    return isset($_COOKIE['tablecolor']) ? $_COOKIE['tablecolor'] : '#ccc';
-}
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['tablecolor'])) {
-        $selectedColor = $_POST['tablecolor'];
-        savePreference($selectedColor);
+// Zkontrolujeme, zda byl formulář odeslán
+function nacti_vybranou_barvu() {
+    if (isset($_COOKIE["vybrana_barva"])) {
+        return $_COOKIE["vybrana_barva"];
+    } else {
+        return "#ccc";
     }
 }
-$selectedColor = loadPreference();
 ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <link href="../css/novinky.css" rel="stylesheet" />
     <style>
-		body {
-      background-color: <?php echo $selectedColor; ?>;
-    }
-	</style>
+        body {
+            background-color: <?php echo nacti_vybranou_barvu(); ?>;
+            }
+	   </style>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novinky</title>

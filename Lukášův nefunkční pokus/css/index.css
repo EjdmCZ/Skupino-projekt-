@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "Montserrat";
   src: url(../font/Montserrat-Regular.ttf);
@@ -205,6 +206,7 @@ color: rgb(170, 238, 81);
 .dropdown {
   position: relative;
   display: inline-block;
+  padding: 1.4vw;
 }
 
 .dropdown .dropdown-content {

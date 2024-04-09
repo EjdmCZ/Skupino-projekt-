@@ -1,53 +1,26 @@
-<?php 
-  session_start();
-   if (!isset($_SESSION["prihlaseni"])) {
-       $_SESSION["prihlaseni"] = false;
-      }
-  if (!isset($_SESSION["username"])) {
-       $_SESSION["username"] = "Nepřihlášen" ;
-      }
- ?>
- <?php
-function savePreference($color) {
-    setcookie('tablecolor', $color, time() + (86400 * 30), "/");
-}
-function loadPreference() {
-    return isset($_COOKIE['tablecolor']) ? $_COOKIE['tablecolor'] : '#ccc';
-}
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['tablecolor'])) {
-        $selectedColor = $_POST['tablecolor'];
-        savePreference($selectedColor);
+<?php
+function nacti_vybranou_barvu() {
+    if (isset($_COOKIE["vybrana_barva"])) {
+        return $_COOKIE["vybrana_barva"];
+    } else {
+        return "#ccc";
     }
 }
-$selectedColor = loadPreference();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
   <link href="../css/index.css" rel="stylesheet" />
-  <style>
-		body {
-      background-color: <?php echo $selectedColor; ?>;
-    }
-	</style>
-	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informace ze světa her
-      
-    </title>
-  </head>
-  <body>
-    <?php
-      $Prihlasen_TF = "";
-      if ($_SESSION["prihlaseni"] == true) {
-        $Prihlasen_TF = "Přihlášen";
-        } else {$Prihlasen_TF = "Nepřihlášen";}
-      $username = $_SESSION["username"];
-      if ($_SESSION["prihlaseni"] == false) {
-           $StylDispleje = "none";
-          } else {$StylDispleje = "block";}   
-    ?>  
+    <style>
+        body {
+            background-color: <?php echo nacti_vybranou_barvu(); ?>;
+          }
+    </style>
+    <title>Informace ze světa her</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
     <div class="nav">
       <ul>
         <li><a class="Novinky" href="novinky.php">Novinky</a></li>
@@ -70,8 +43,6 @@ $selectedColor = loadPreference();
             display: <?php echo $StylDispleje; ?>;
                       }
     </style>
-    <p class="skryty-text">Vítejte <?php echo $username; ?></p>
-    <p><?php echo $Prihlasen_TF; ?></p>
     </div class="txt">
     <p class="Info" >Informace z Celého</br> Světa Her</p>
   </div>
@@ -92,7 +63,6 @@ if(count($_COOKIE) > 0) {
 }
 ?>
 
-  <script src="../javascript/js.js"></script>
   </body>  
     
 </html>
