@@ -36,6 +36,10 @@
                     $zprava = "Přihlášení úspěšné, Vítejte, Jakube Mesicku,!";
                     $_SESSION["prihlaseni"] = true;
                     $_SESSION["username"] = "Jakub Mesicek";
+                } elseif ($uzivatelskeJmeno === "Adam Wild" && $heslo === "12345") {
+                    $zprava = "Přihlášení úspěšné, Vítejte, Adame Wilde!";
+                    $_SESSION["prihlaseni"] = true;
+                    $_SESSION["username"] = "Adam Wild";
                 } else {    
                     $zprava = "Špatné uživatelské jméno nebo heslo. Zkontrolujte své údaje.";
                     $_SESSION["prihlaseni"] = false;
