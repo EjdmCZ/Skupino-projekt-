@@ -12,29 +12,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 $selectedColor = loadPreference();
+
+// Zkontrolujeme, zda byl formulář odeslán
+function nacti_vybranou_barvu() {
+    if (isset($_COOKIE["vybrana_barva"])) {
+        return $_COOKIE["vybrana_barva"];
+    } else {
+        return "#ccc";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <script src="https://kit.fontawesome.com/0ecc88a5a3.js" crossorigin="anonymous"></script>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../css/novinky.css" rel="stylesheet" />
     <style>
-		body {
-      background-color: <?php echo $selectedColor; ?>;
-    }
-	</style>
+        body {
+            background-color: <?php echo nacti_vybranou_barvu(); ?>;
+            }
+	   </style>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novinky</title>
   </head>
   <body>
   <?php include 'navbar.php';?>
-  </div>
-     </ul>
-    </div>
+
     <table>
       <tr class="ramecek">
         <th>Last Holiday</th>

@@ -1,10 +1,24 @@
+<?php
+function nacti_vybranou_barvu() {
+    if (isset($_COOKIE["vybrana_barva"])) {
+        return $_COOKIE["vybrana_barva"];
+    } else {
+        return "#ccc";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <link href="../css/hry.css" rel="stylesheet" />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            background-color: <?php echo nacti_vybranou_barvu(); ?>;
+        }
+	  </style>
+  	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
   </head>
   <body>

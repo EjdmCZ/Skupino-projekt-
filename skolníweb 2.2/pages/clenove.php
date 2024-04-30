@@ -1,3 +1,12 @@
+<?php
+function nacti_vybranou_barvu() {
+    if (isset($_COOKIE["vybrana_barva"])) {
+        return $_COOKIE["vybrana_barva"];
+    } else {
+        return "#ccc";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,15 +18,13 @@
   </head>
   <body>
   <?php include 'navbar.php';?>
-        </div>
-     </ul>
-    </div>
+
     <h1 class="nadpis">Naši Členové</h1>
     <div class="infoa">
       <div id="adam2">Adam Wild</div>
       <div id="luks2">Lukáš Vorlíček</div>
       <div id="stepan2">Štěpán Šesták</div>
-      <div id="trachtic2">Jan Trachta</div>
+      <div id="trachtic2">☠Jan Trachta☠</div>
     </div>
     <a target="_blank" href="../pages/bio1.html"
       ><img class="adam" src="../pictures/adam.png"

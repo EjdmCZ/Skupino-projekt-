@@ -32,6 +32,7 @@
                     $zprava = "Přihlášení úspěšné, Vítejte, Jan Macak!";
                     $_SESSION["prihlaseni"] = true;
                     $_SESSION["username"] = "Jan Macak";
+
                 } elseif ($uzivatelskeJmeno === "Jakub Mesicek" && $heslo === "12345") {
                     $zprava = "Přihlášení úspěšné, Vítejte, Jakube Mesicku,!";
                     $_SESSION["prihlaseni"] = true;
@@ -40,6 +41,7 @@
                     $zprava = "Přihlášení úspěšné, Vítejte, Adame Wilde!";
                     $_SESSION["prihlaseni"] = true;
                     $_SESSION["username"] = "Adam Wild";
+
                 } else {    
                     $zprava = "Špatné uživatelské jméno nebo heslo. Zkontrolujte své údaje.";
                     $_SESSION["prihlaseni"] = false;
@@ -48,6 +50,7 @@
             ?>
 
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+
             <label>Uživatelské jméno:</label>
             <input type="text" name="user" placeholder="Napiš sem svoje jméno" id="Jmeno"><br>
 
