@@ -1,40 +1,40 @@
+<?php
+function savePreference($color) {
+    setcookie('tablecolor', $color, time() + (86400 * 30), "/");
+}
+function loadPreference() {
+    return isset($_COOKIE['tablecolor']) ? $_COOKIE['tablecolor'] : '#ccc';
+}
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['tablecolor'])) {
+        $selectedColor = $_POST['tablecolor'];
+        savePreference($selectedColor);
+    }
+}
+$selectedColor = loadPreference();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href="../css/novinky.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/0ecc88a5a3.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/novinky.css" rel="stylesheet" />
+    <style>
+		body {
+      background-color: <?php echo $selectedColor; ?>;
+    }
+	</style>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novinky</title>
   </head>
   <body>
-    <div class="nav">
-      <ul>
-        <li><a class="Novinky" href="novinky.php">Novinky</a></li>
-        <li><a class="Domov" href="index.php">Domů</a></li>
-        <li><a class="Hry" href="hry.html">Hry</a></li>
-        <li><a class="onás" href="onas.html">O nás</a></li>
-        <img
-          src="moon.png"
-          id="mode-toggle"
-          alt="Dark Mode / Light Mode"
-          onclick="toggleMode()"
-        />
-      </ul>
-      <script src="../javascript/js.js "></script>
+  <?php include 'navbar.php';?>
+  </div>
+     </ul>
     </div>
-
-    <?php
-
-      $novinka = array(
-        "Jméno" => "Last Holiday" ,
-        "Vydaní" => "18. května 2023 ",
-        "Vydavatel" => "Boomer Games",
-        "Popis" => "Hra nebyla plně vydaná, a její budoucnost je nejsitá. Hra je v Předběžným přístupu vyšla ve strašném stavu, a plného vydání se nejspíš nedočká"
-         );
-
-    ?>
-
     <table>
       <tr class="ramecek">
         <th>Last Holiday</th>
@@ -49,29 +49,7 @@
           někdy na přelomu let 2023 a 2024 by se měla dočkat plného vydání.
         </th>
       </tr>
-
-      <table class="ramecek">
-        <tr>
-        <th>
-          <?php echo $novinka["Jméno"] ?>
-        </th>
-        </tr>
-        <tr>
-        <th>
-          <?php echo $novinka["Vydaní"] ?>
-        </th>
-        </tr>
-        <tr>
-        <th>
-          <?php echo $novinka["Vydavatel"] ?> 
-        </th>
-          </tr>
-        <tr>  
-        <th>
-          <?php echo $novinka["Popis"] ?>
-        </th>
-        </tr>
-      </table>
     </table>
+    <script src="../javascript/js.js"></script>
   </body>
 </html>

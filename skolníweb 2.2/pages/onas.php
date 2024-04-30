@@ -8,15 +8,9 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="nav">
-      <ul>
-        <li><a class="Novinky" href="novinky.html">Novinky</a></li>
-        <li><a class="Domov" href="index.php">Domů</a></li>
-        <li><a class="Hry" href="hry.html">Hry</a></li>
-        <li><a class="onás" href="onas.html">O nás</a></li>
-        <img src="moon.png" id="mode-toggle" alt="Dark Mode / Light Mode" onclick="toggleMode()">
-      </ul>
-   
+  <?php include 'navbar.php';?>
+        </div>
+     </ul>
     </div>
     <p class="text">Něco o nás.</p>
     <p class="text2">
@@ -24,7 +18,7 @@
     </p>
     <div class="zobrazit">
     <ul>
-      <li><a href="clenove.html">Zjistit Více</a></li>
+      <li><a href="clenove.php">Zjistit Více</a></li>
       </ul>
     </div>
   </body>

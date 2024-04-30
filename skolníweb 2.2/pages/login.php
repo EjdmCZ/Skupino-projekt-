@@ -21,31 +21,31 @@
     <div class="form">
         <h1 id="Prvni_nadpis">Přihlášení</h1>
 
-<?php
+            <?php
+            $zprava = '';
 
-$zprava = '';
-$uzivatele = array(
-    "Jan Macak" => "12345",
-    "Jakub Mesicek" => "12345",
-    "Jaromír Soukup" => "12345",
-    "Adam Jelínek" => "6789"
-);
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $uzivatelskeJmeno = isset($_POST["user"]) ? $_POST["user"] : "";
+                $heslo = isset($_POST["user_pass"]) ? $_POST["user_pass"] : "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $uzivatelskeJmeno = isset($_POST["user"]) ? $_POST["user"] : "";
-    $heslo = isset($_POST["user_pass"]) ? $_POST["user_pass"] : "";
-
-    if (array_key_exists($uzivatelskeJmeno, $uzivatele) && $uzivatele[$uzivatelskeJmeno] === $heslo) {
-        $zprava = "Přihlášení úspěšné, Vítejte, $uzivatelskeJmeno!";
-        $_SESSION["prihlaseni"] = true;
-        $_SESSION["username"] = $uzivatelskeJmeno;
-    } else {
-        $zprava = "Špatné uživatelské jméno nebo heslo. Zkontrolujte své údaje.";
-        $_SESSION["prihlaseni"] = false;
-    }
-}
-?>
-
+                if ($uzivatelskeJmeno === "Jan Macak" && $heslo === "12345") {
+                    $zprava = "Přihlášení úspěšné, Vítejte, Jan Macak!";
+                    $_SESSION["prihlaseni"] = true;
+                    $_SESSION["username"] = "Jan Macak";
+                } elseif ($uzivatelskeJmeno === "Jakub Mesicek" && $heslo === "12345") {
+                    $zprava = "Přihlášení úspěšné, Vítejte, Jakube Mesicku,!";
+                    $_SESSION["prihlaseni"] = true;
+                    $_SESSION["username"] = "Jakub Mesicek";
+                } elseif ($uzivatelskeJmeno === "Adam Wild" && $heslo === "12345") {
+                    $zprava = "Přihlášení úspěšné, Vítejte, Adame Wilde!";
+                    $_SESSION["prihlaseni"] = true;
+                    $_SESSION["username"] = "Adam Wild";
+                } else {    
+                    $zprava = "Špatné uživatelské jméno nebo heslo. Zkontrolujte své údaje.";
+                    $_SESSION["prihlaseni"] = false;
+                }
+            }
+            ?>
 
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <label>Uživatelské jméno:</label>

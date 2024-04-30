@@ -6,54 +6,6 @@
   font-family: "Montserrat-bold";
   src: url(../font/Montserrat-Bold.ttf);
 }
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #ccc;
-}
-.Info {
-  font-family: "Montserrat-bold";
-  margin: 2vw;
-  text-align: left;
-  font-size: 7vh;
-  margin-top: 17vh;
-}
-.zobrazit ul {
-  font-size: 4vh;
-  font-family: "Montserrat-bold";
-  list-style: none;
-  background-color: rgb(0, 0, 0);
-  text-align: center;
-  padding: 0vh;
-  margin: 10vh;
-  margin-left: 40vw;
-  margin-right: 40vw;
-  border-radius: 20px;
-}
-.zobrazit li {
-  display: inline-block;
-}
-.zobrazit a {
-  text-decoration: none;
-  color: rgb(170, 238, 81);
-  display: block;
-  padding: 0;
-}
-.zobrazit ul:hover {
-  margin: 10vh;
-  background: rgb(95, 95, 95);
-  transition: 0.6s;
-  border-radius: 500px;
-  margin-left: 40vw;
-  margin-right: 40vw;
-}
-.zbyt {
-  font-family: "Montserrat";
-  margin-left: 2vw;
-  text-align: left;
-  font-size: 3.5vh;
-  bottom: 35vh;
-}
 
 .nav ul {
   font-family: "Montserrat";
@@ -74,17 +26,6 @@ body {
 .nav a:hover {
   background: rgb(95, 95, 95);
   transition: 0.4s;
-}
-
-p {
-  font-family: "Montserrat";
-}
-.dis {
-  color: rgb(29, 0, 133);
-  text-decoration: none;
-}
-.dis a:hover {
-  text-decoration: underline;
 }
 
 @media only screen and (min-width: 600px) {
@@ -167,7 +108,7 @@ p {
   }
 }
 #mode-toggle {
-  position: absolute;
+  position: relative;
   margin-top: 3.5vh;
   width: 4vh;
   cursor: pointer;
@@ -180,7 +121,7 @@ p {
 .txt {
   padding: 2vh;
 }
-}
+
 .login {
   position: absolute;
   width: 180vw;
@@ -193,35 +134,45 @@ p {
   color: rgb(170, 238, 81);
 }
 .logpis {
-color: rgb(170, 238, 81);
+  color: rgb(170, 238, 81);
 }
 .menu {
   bottom: 1px;
   position: absolute;
-  margin-left: 25vw;
+
   width: 7vh;
   cursor: pointer;
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-.dropdown .dropdown-content {
+@media (max-width: 600px) {
+  .dropdown-content {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 601px) {
+  .dropdown-content {
+    position: absolute;
+
+    width: auto;
+  }
+}
+
+.dropdown-content {
+  font-size: 4.5vh;
   display: none;
-  position: absolute;
-  left: 35vh;
-  background-color: white;
+  background-color: rgb(97, 97, 97);
   padding: 15px;
 }
+
 .dropdown:hover .dropdown-content {
+  background-color: black;
   display: block;
 }
-.okolo_form {
-  text-align: center;
-}
-
-.lab{
-  display: inline-block;
-}
-

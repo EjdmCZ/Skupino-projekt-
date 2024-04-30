@@ -1,38 +1,25 @@
-<?php
-function savePreference($color) {
-    setcookie('tablecolor', $color, time() + (86400 * 30), "/");
-}
-function loadPreference() {
-    return isset($_COOKIE['tablecolor']) ? $_COOKIE['tablecolor'] : '#ccc';
-}
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['tablecolor'])) {
-        $selectedColor = $_POST['tablecolor'];
-        savePreference($selectedColor);
-    }
-}
-$selectedColor = loadPreference();
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <link href="../css/novinky.css" rel="stylesheet" />
-    <style>
-		body {
-      background-color: <?php echo $selectedColor; ?>;
-    }
-	</style>
-	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Novinky</title>
   </head>
   <body>
     <div class="nav">
       <ul>
-        <li><a class="Novinky" href="novinky.php">Novinky</a></li>
+        <li><a class="Novinky" href="novinky.html">Novinky</a></li>
         <li><a class="Domov" href="index.php">Domů</a></li>
-        <li><a class="Hry" href="hry.php">Hry</a></li>
-        <li><a class="onás" href="onas.php">O nás</a></li>
+        <li><a class="Hry" href="hry.html">Hry</a></li>
+        <li><a class="onás" href="onas.html">O nás</a></li>
+        <img
+          src="moon.png"
+          id="mode-toggle"
+          alt="Dark Mode / Light Mode"
+          onclick="toggleMode()"
+        />
       </ul>
       <script src="../javascript/js.js "></script>
     </div>

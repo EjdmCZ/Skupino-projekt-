@@ -7,10 +7,52 @@
   src: url(../font/Montserrat-Bold.ttf);
 }
 body {
-  font-family: "Montserrat";
   margin: 0;
   padding: 0;
   background-color: #ccc;
+}
+.Info {
+  font-family: "Montserrat-bold";
+  margin: 2vw;
+  text-align: left;
+  font-size: 7vh;
+  margin-top: 17vh;
+}
+.zobrazit ul {
+  font-size: 4vh;
+  font-family: "Montserrat-bold";
+  list-style: none;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 0vh;
+  margin: 10vh;
+  margin-left: 40vw;
+  margin-right: 40vw;
+  border-radius: 20px;
+}
+.zobrazit li {
+  display: inline-block;
+}
+.zobrazit a {
+  text-decoration: none;
+  color: rgb(170, 238, 81);
+  display: block;
+  padding: 0;
+}
+.zobrazit ul:hover {
+  margin: 10vh;
+  background: rgb(95, 95, 95);
+  transition: 0.6s;
+  border-radius: 500px;
+  margin-left: 40vw;
+  margin-right: 40vw;
+}
+.zbyt {
+  font-family: "Montserrat";
+  margin-left: 2vw;
+  text-align: left;
+  font-size: 3.5vh;
+  bottom: 35vh;
 }
 
 .nav ul {
@@ -33,12 +75,16 @@ body {
   background: rgb(95, 95, 95);
   transition: 0.4s;
 }
-.Ohranicenii {
-  border-color: black;
-  border-width: 15%;
+
+p {
+  font-family: "Montserrat";
 }
-[class*="col-"] {
-  width: 100%;
+.dis {
+  color: rgb(29, 0, 133);
+  text-decoration: none;
+}
+.dis a:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 600px) {
@@ -120,31 +166,6 @@ body {
     width: 100%;
   }
 }
-h1 {
-  font-family: "Montserrat-bold";
-}
-
-div {
-  font-size: 2.5vh;
-}
-.video {
-  width: 75vh;
-  height: 45vh;
-  border-radius: 7vh;
-
-  padding: 1vh;
-}
-
-.vid {
-  border-radius: 7vh;
-  background-color: rgb(170, 238, 81);
-}
-.grafrez {
-  width: 155%;
-  height: 150%;
-  border-radius: 7vh;
-  background-color: rgb(170, 238, 81);
-}
 #mode-toggle {
   position: absolute;
   margin-top: 3.5vh;
@@ -155,4 +176,51 @@ div {
 .dark-mode {
   background-color: rgba(3, 3, 3, 0.952);
   color: rgb(170, 238, 81);
+}
+.txt {
+  padding: 2vh;
+}
+
+.login {
+  position: absolute;
+  width: 180vw;
+}
+.logbut {
+  margin-right: 0.8vw;
+  padding: 1vw;
+  border-color: grey;
+  border-style: outset;
+  color: rgb(170, 238, 81);
+}
+.logpis {
+  color: rgb(170, 238, 81);
+}
+.menu {
+  bottom: 1px;
+  position: absolute;
+  margin-left: 25vw;
+  width: 7vh;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  left: 35vh;
+  background-color: white;
+  padding: 15px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.okolo_form {
+  text-align: center;
+}
+
+.lab {
+  display: inline-block;
 }
