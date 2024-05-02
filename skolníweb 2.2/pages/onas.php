@@ -1,9 +1,12 @@
 <?php
+
+
 function nacti_vybranou_barvu() {
     if (isset($_COOKIE["vybrana_barva"])) {
         return $_COOKIE["vybrana_barva"];
     } else {
         return "#ccc";
+    }
 }
 ?>
 <!DOCTYPE html>

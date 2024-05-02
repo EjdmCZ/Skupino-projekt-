@@ -73,7 +73,7 @@ if(count($_COOKIE) > 0) {
   echo "Cookies are disabled.";
 }
 ?>
-
+  <script src="../javascript/js.js"></script>
   </body>  
     
 </html>

@@ -24,6 +24,7 @@ function nacti_vybranou_barvu() {
     </style>
 </head>
 <body>
+<?php include 'navbar.php';?>
 
 <h2 ><a href=index.php>Výběr barvy stránky</a></h2>
 

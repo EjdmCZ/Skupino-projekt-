@@ -1,4 +1,7 @@
-<div class="nav">
+
+<head>
+  <link rel="stylesheet" href="..\css\navbar.css"/><div class="nav">
+</head>
     <ul>
       <li><a class="Novinky" href="novinky.php">Novinky</a></li>
       <li><a class="Domov" href="index.php">Domů</a></li>
@@ -10,6 +13,7 @@
         <div class="dropdown-content">
           <a href="login.php">login</a>
           <a href="register.html">register</a>
+          <a href ="custom.php">customize</a>
         </div>
       </div>
     </ul>
