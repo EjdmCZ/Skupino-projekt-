@@ -1,10 +1,5 @@
-# Skupino-projekt-
-Wild-úprava grafiky.
-Vorlíček-Grafický návrh.
-Šešták-Zpracování novinky. 
-Trachta-Zpracování novinky na web.
-branch jenom prov me
+# Skupino projekt 
 
-
-
+Webové stránky o video hrách. Zároveň prodej videoher (něco jako steam/epic games) a merchandise. <br>
+K dispozici bude hra dinosaur, piškvorky, flappy bird.
 
