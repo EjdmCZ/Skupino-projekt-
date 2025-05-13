@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(../font/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat-bold";
+  src: url(../font/Montserrat-Bold.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;
+}
+.nav ul {
+  font-family: "Montserrat";
+  font-size: 4vh;
+  list-style: none;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+}
+.nav li {
+  display: inline-block;
+}
+.nav a {
+  text-decoration: none;
+  color: rgb(170, 238, 81);
+  display: block;
+  padding: 1.4vw;
+}
+.nav a:hover {
+  background: rgb(95, 95, 95);
+  transition: 0.4s;
+}
+.text {
+  font-family: "Montserrat-bold";
+  margin: 2vw;
+  text-align: left;
+  font-size: 7vh;
+  margin-top: 17vh;
+}
+.text2 {
+  font-family: "Montserrat";
+  margin-left: 2vw;
+  text-align: left;
+  font-size: 3.5vh;
+  bottom: 49vh;
+}
+a {
+  color: black;
+  text-decoration: underline;
+}
+a :hover {
+  color: (255, 60, 0);
+}
+#mode-toggle {
+  position: absolute;
+  margin-top: 3.5vh;
+  width: 4vh;
+  cursor: pointer;
+}
+
+.dark-mode {
+  background-color: rgba(3, 3, 3, 0.952);
+  color: rgb(170, 238, 81);
+}
+.dark-mode a {
+  color: rgb(170, 238, 81);
+}
+.zobrazit ul {
+  font-size: 4vh;
+  font-family: "Montserrat-bold";
+  list-style: none;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 0vh;
+  margin: 10vh;
+  margin-left: 40vw;
+  margin-right: 40vw;
+  border-radius: 20px;
+}
+.zobrazit li {
+  display: inline-block;
+}
+.zobrazit a {
+  text-decoration: none;
+  color: rgb(170, 238, 81);
+  display: block;
+  padding: 0;
+}
+.zobrazit ul:hover {
+  margin: 10vh;
+  background: rgb(95, 95, 95);
+  transition: 0.6s;
+  border-radius: 500px;
+  margin-left: 40vw;
+  margin-right: 40vw;
+}
